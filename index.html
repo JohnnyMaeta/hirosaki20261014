@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作るのは道具、選ぶのは子ども｜弘前地区小学校視聴覚教育研究会 10月半日研修会 特設ページ（前多昌顕）</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --ink: #22242a; --muted: #6b6f76; --line: #e4e4e0;
+    --accent: #1e5573; --accent-soft: #e6eef4; --code-bg: #1e2127; --code-ink: #e6e6e6;
+    --note-bg: #fff8e6; --note-line: #e8d48a; --note-ink: #6b5310;
+    --hot: #b3252c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d; --panel: #1e2127; --ink: #e7e8ea; --muted: #9aa0a8; --line: #313640;
+      --accent: #7fb6d8; --accent-soft: #1c2630; --code-bg: #12141a; --code-ink: #e6e6e6;
+      --note-bg: #2a2617; --note-line: #5c5024; --note-ink: #e0cf90;
+      --hot: #e8868b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+    line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 40px 20px 80px; }
+  header.page { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 8px; }
+  header.page h1 { font-size: 1.6rem; margin: 0 0 6px; letter-spacing: .01em; }
+  header.page .sub { color: var(--muted); font-size: .95rem; margin: 0; }
+  .lead { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 24px 0 32px; font-size: .95rem; }
+  .lead h2 { font-size: 1rem; margin: 0 0 8px; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  nav.toc a { text-decoration: none; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
+  section.step { margin-bottom: 44px; }
+  section.step > h2 { font-size: 1.25rem; border-left: 5px solid var(--accent); padding-left: 12px; margin: 0 0 10px; }
+  section.step h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+  .what { color: var(--muted); font-size: .93rem; margin: 0 0 12px; }
+  .note { background: var(--note-bg); border: 1px solid var(--note-line); color: var(--note-ink); border-radius: 8px; padding: 10px 14px; font-size: .86rem; margin: 12px 0; }
+  .note.calm { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+  .codewrap { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); margin: 14px 0; }
+  .codebar { display: flex; justify-content: space-between; align-items: center; background: var(--code-bg); padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .codebar .fname { color: #9aa7b8; font-size: .78rem; font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .copy-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 5px 14px; font-size: .8rem; cursor: pointer; white-space: nowrap; }
+  .copy-btn:hover { filter: brightness(1.08); }
+  .copy-btn.done { background: #3a6a4a; }
+  pre { margin: 0; background: var(--code-bg); color: var(--code-ink); padding: 16px; overflow-x: auto; font-size: .86rem; line-height: 1.7; white-space: pre-wrap; word-break: break-all; }
+  pre code { font-family: "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  .btnlink { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; border-radius: 8px; padding: 10px 20px; font-size: .95rem; margin: 6px 4px 6px 0; }
+  .btnlink:hover { filter: brightness(1.08); }
+  .btnlink.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .btnlink.big { font-size: 1.05rem; padding: 14px 24px; }
+  ol.steps { padding-left: 1.3em; } ol.steps li { margin: 10px 0; }
+  ul.checks { padding-left: 1.3em; } ul.checks li { margin: 10px 0; }
+  table.rub { width: 100%; border-collapse: collapse; font-size: .92rem; margin: 12px 0; }
+  table.rub th, table.rub td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.rub th { background: var(--accent-soft); width: 32%; }
+  .line3 { background: var(--panel); border: 2px solid var(--accent); border-radius: 12px; padding: 16px 20px; text-align: center; font-size: 1.15rem; font-weight: 700; margin: 12px 0; }
+  .line3 small { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); margin-top: 6px; }
+  .haiku { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 8px 0; font-size: 1.02rem; }
+  .haiku b { color: var(--accent); margin-right: .5em; }
+  .one { background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--hot); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+  .one h4 { margin: 0 0 4px; font-size: 1.02rem; }
+  .one p { margin: 0; font-size: .89rem; color: var(--muted); }
+  .cta { background: var(--accent-soft); border-radius: 12px; padding: 18px 20px; margin-top: 40px; font-size: .95rem; }
+  .cta strong { color: var(--accent); }
+  footer.page { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+  @media (max-width: 600px) { .wrap { padding: 24px 14px 60px; } header.page h1 { font-size: 1.3rem; } pre { font-size: .82rem; } }
+</style></head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>作るのは道具、選ぶのは子ども｜特設ページ</h1>
+  <p class="sub">令和8年度 弘前地区小学校視聴覚教育研究会 10月半日研修会（2026年10月14日・弘前市立西小学校）／前多昌顕</p>
+</header>
+
+<div class="lead">
+  <h2>このページがあるので、メモは取らなくて大丈夫です</h2>
+  <p>ワークで使う手順も、AIに打つ文も、道具のリンクも、<strong>全部ここに置いてあります</strong>。画面を追いかけるより、手を動かすことと「自分の学級だとどうかな」と考えることに時間を使ってください。</p>
+  <p style="margin-bottom:0"><strong>うまく開けない人は、隣の方と2人で1台で構いません。</strong>今日は「全員が自分の端末でできたか」を競う会ではありません。</p>
+</div>
+
+<nav class="toc">
+  <a href="#three">今日の3つの操作</a>
+  <a href="#zuko">① 図工（Canva）</a>
+  <a href="#shakai">② 社会（話し合い）</a>
+  <a href="#kokugo">③ 国語（俳句）</a>
+  <a href="#one">明日、1個だけ</a>
+  <a href="#slides">スライド</a>
+  <a href="#tools">道具（無料）</a>
+  <a href="#reflect">振り返り</a>
+</nav>
+
+<section class="step" id="three">
+  <h2>今日、持ち帰る操作は3つだけです</h2>
+  <p class="what">2時間ありますが、覚えていただくのはこれだけです。あとは全部おまけです。</p>
+  <div class="line3">Ctrl + D　／　「課題」で配る　／　録って、入れて、「まとめて」
+    <small>図工・全教科・社会／国語。どれも、先生が覚える操作は1つずつです</small></div>
+  <table class="rub">
+    <tr><th>道具がやること</th><td>たくさん作る・全部拾う・一瞬でまとめる</td></tr>
+    <tr><th>子どもがやること</th><td>どれを採るかを<strong>選ぶ</strong>・どこが良いかを<strong>言う</strong>・直すか直さないかを<strong>決める</strong></td></tr>
+    <tr><th>先生がやること</th><td>ものさしを渡す・まとまったものから<strong>次の問いを決める</strong></td></tr>
+  </table>
+</section>
+
+<section class="step" id="zuko">
+  <h2>① 図工　――　キーを1つ覚えるだけで、作品ができます</h2>
+  <p class="what">教科書に「同じ形を少しずつずらして重ねて作品をつくる」「コンピュータでもできます」と書かれている、あの単元です。使うのは <strong>Canva</strong>、教えるキーは1つだけです。</p>
+
+  <h3>やり方（これだけです）</h3>
+  <ol class="steps">
+    <li><strong>線を1本描く。</strong>直線でも、波線でも、折れ線でも構いません</li>
+    <li>その図形を選んで <strong>Ctrl + D</strong>（Macは Cmd + D）。真上に複製されます</li>
+    <li>複製を、<strong>少しだけずらす</strong>。角度も少し変えてOK</li>
+    <li>あとは <strong>Ctrl + D を連打</strong>。最初につけた角度と間隔のまま、同じリズムで増えていきます</li>
+  </ol>
+  <div class="note calm">③で「少しずらす」ところが肝です。ずらす前に連打しても、ぴったり重なるだけで何も起きません。<strong>一度ずらしてから連打</strong>、と子どもに言ってください。</div>
+
+  <h3>あと2つだけ足すと、作品が一段変わります</h3>
+  <ul class="checks">
+    <li><strong>透明度を下げる</strong>（図形を選択 → 透明度のスライダー）。重なったところの色が混ざって、深みのある模様になります</li>
+    <li><strong>Alt を押しながらドラッグ</strong>（Macは Option）。等間隔ではなく、1つずつ感覚的にずらして増やせます。Ctrl+D の「きっちり」と使い分けます</li>
+  </ul>
+  <p class="what">先生が子どもに教えるのは、実質この3つだけです。あとは「好きなように色を変えたり、重ねたりしてごらん」で授業が回ります。</p>
+
+  <h3>配り方 ――「課題」で配ると、共有リンクが要りません</h3>
+  <ol class="steps">
+    <li><strong>見本を1枚つくる。</strong>白紙でも構いません（今日お配りしたのは、線が1本だけ入った紙です）</li>
+    <li><strong>「課題」として出す。</strong>配付のたびにリンクを作ってコピーして貼る、が要らなくなります</li>
+    <li><strong>手元の一覧を開く。</strong>誰がどこまで進んだかが、開いた瞬間に分かります</li>
+  </ol>
+  <div class="note">見えているのは「できあがり」ではなく「作っている途中」です。手が止まっている子が画面で分かります。紙だと、机を回らないと分からなかったところです。</div>
+
+  <h3>道具が入ると、必ずこの質問が来ます</h3>
+  <div class="line3">「先生、で、どれがいいの？」
+    <small>速く作れる道具が入ると、授業の中身は「作ること」から「選ぶこと」に移ります</small></div>
+  <p class="what">この時間のものさしは、子どもと決めてください。たとえば――リズムが気持ちいいか／重なりがきれいか／色の混ざり方はどうか。</p>
+</section>
+
+<section class="step" id="shakai">
+  <h2>② 社会　――　話し合いを、その時間の中でまとめます</h2>
+  <p class="what">5年「食料生産をささえる人々」。チラシを見て「この食品は、どこから来たのか」を話し合い、それを録音して <strong>Gemini Notebook</strong> にまとめてもらいます。<strong>持ち帰って夜に読んで、次の時間にやっと返す</strong>――をやめられます。</p>
+
+  <h3>やること①　録音を回してから、話し合う</h3>
+  <ol class="steps">
+    <li>班の代表が1人だけ、<a href="#tools">スーパー記録くん neo2</a> を開く</li>
+    <li><strong>グループ名を入れる</strong>（「1班」「2班」…）。空欄だと保存できません</li>
+    <li>録音ボタンを押して、机の真ん中に置く。あとは、いつもどおり話し合うだけです</li>
+  </ol>
+  <div class="line3">まとめなくて、いいです。
+    <small>出しっぱなしで構いません。まとめるのは、あとで道具がやります</small></div>
+  <p class="what">話し合いの最後に「では班の意見をまとめて」と言ってきた、あれをやめられます。ここが、この道具でいちばん変わるところです。</p>
+
+  <h3>やること②　終わった班から保存して、そのまま入れる</h3>
+  <p class="what">保存ボタンを1回押すだけです。押した班から順に、先生が Gemini Notebook に入れていきます。<strong>全部の班が終わるのを待ちません。</strong>録音は保存先のフォルダにまとまって入るので、Notebook側は「Googleドライブから選ぶ」でまとめて取り込めます。</p>
+
+  <h3>やること③　まとめてもらう</h3>
+  <p class="what">下の文を Gemini Notebook に貼ってください。</p>
+  <div class="codewrap">
+    <div class="codebar"><span class="fname">全班の話し合いをまとめる</span>
+      <button class="copy-btn" data-copy="p-matome">コピー</button></div>
+    <pre><code id="p-matome">全部の班の話し合いを、まとめてください。
+・班ごとに、どんなことに注目していたかが分かるように書いてください。
+・出ていた意見は、少数のものも落とさずに拾ってください。
+・小学5年生にも読める言葉で、箇条書きでお願いします。</code></pre>
+  </div>
+  <div class="note calm"><strong>「少数のものも落とさずに」を必ず入れてください。</strong>これを入れないと、多数派の意見だけがまとまって、静かな子の一言が消えます。</div>
+
+  <h3>やること④　出てきたまとめで、次の発問をする</h3>
+  <p class="what">「A班は外国から来たものに、B班は県内のものに注目していました。では――」。まとめは次の時間ではなく、<strong>この45分の中で戻ってきます</strong>。</p>
+
+  <h3>何が変わったのか</h3>
+  <ul class="checks">
+    <li><strong>聞いて回れるのは、1〜2班だけでした。</strong>残りの班で何が話されたかは、これまで分からないままでした。声の大きい子の主張だけが残って、チャイムで教師がまとめる――静かな子の一言を、捨てないで済みます</li>
+    <li><strong>まとめるのはAI、どこを入口にするかは教師です。</strong>まとめる作業は渡しました。でも「次にどこを問うか」は渡していません。そこが授業です</li>
+    <li><strong>入れるのは、かんたんです。</strong>スプレッドシートをコピーして、デプロイして、URLを配るだけ。コードは1行も触りません</li>
+  </ul>
+  <div class="note"><strong>自治体のルールで、子どもの声を録るのが難しい場合。</strong>まず<strong>職員の協議</strong>から試してください。校内研の協議を録ってまとめさせると、そのまま研修報告の下書きになります。</div>
+</section>
+
+<section class="step" id="kokugo">
+  <h2>③ 国語　――　AIに直させないで、俳句を作ります</h2>
+  <p class="what">5年「日常を十七音で」で実際にやった流れの圧縮版です。AIが入るのは後半だけ。<strong>最初の一句は必ず自力</strong>、そして<strong>最後は必ず自分の句に戻ります</strong>。</p>
+
+  <div class="line3">ルーブリックは、提示するものではなく、使わせるもの。
+    <small>配った瞬間は、まだ読まれていません。読み返されるのは「評価する側」に立ったときだけです</small></div>
+
+  <h3>ものさし（ルーブリック）を、先に配ります</h3>
+  <table class="rub">
+    <tr><th>1　音数とリズム</th><td>五・七・五。字余り・字足らずは、あえてならOK</td></tr>
+    <tr><th>2　季語</th><td>季節が伝わる言葉がひとつ。季重なりはおおらかに</td></tr>
+    <tr><th>3　表現の工夫</th><td>比喩・くり返し・言葉の順序・漢字と仮名の使い分け</td></tr>
+  </table>
+  <p class="what">この3観点は、本単元の評価規準とそのまま対応させてあります。作らせてから配るのではなく、<strong>作らせる前に</strong>配ります。</p>
+
+  <h3>やること①　まず、自分で一句（AIには触りません）</h3>
+  <p class="what">お題は「秋の弘前」。紙でも、端末のメモでも構いません。うまく作ろうとしなくて大丈夫です。<strong>ゼロから一をつくるところは、渡しません。</strong>ここを任せた瞬間に、創作の学びが消えます。</p>
+
+  <h3>やること②　自分の句を、AIに見てもらう</h3>
+  <p class="what">下の文をコピーして、ふだん使っているAI（Gemini など）に貼り、最後に自分の句を書き足して送ってください。</p>
+  <div class="codewrap">
+    <div class="codebar"><span class="fname">自分の句に助言をもらう</span>
+      <button class="copy-btn" data-copy="p-haiku">コピー</button></div>
+    <pre><code id="p-haiku">あなたは小学校の国語の先生です。
+次の俳句について、
+①よいところを1つ
+②もっとよくなりそうな提案を2つ
+教えてください。
+直した俳句は、書かないでください。
+
+俳句：</code></pre>
+  </div>
+  <div class="note calm"><strong>「直した俳句は書かないで」が、いちばん大事な一行です。</strong>完成形を見せられたら、子どもは写して終わります。採用するのも、却下するのも作者です。<strong>却下も、立派な推敲です。</strong></div>
+  <p class="what">AIが開けない方は、<strong>隣の方が「選者」になってください</strong>。ものさしがあるので、人でもできます。このワークは、AIが1台も動かなくても最後まで回ります。</p>
+
+  <h3>やること③　AIが作った5句を、ものさしで評価する</h3>
+  <p class="what">出来はそろえていません。わざとばらつかせて作らせてあります。</p>
+  <div class="haiku"><b>①</b>秋が来て　木の葉が赤く　なりました</div>
+  <div class="haiku"><b>②</b>秋風に　名前をよばれた　気がしただけ</div>
+  <div class="haiku"><b>③</b>今日はとてもいい天気だったのでうれしい気持ちになりました</div>
+  <div class="haiku"><b>④</b>新米の　湯気の向こうに　母の顔</div>
+  <div class="haiku"><b>⑤</b>月の下　だんごみっつが　雪のよう</div>
+  <p class="what">近くの2〜3人で3つの観点を当てて、いちばんよかった句を1つ選んでください。<strong>あら探し大会ではありません。</strong>よい句は、よいと言う。物足りない句は、どこが物足りないかを言う。</p>
+  <div class="note">②（五・七・五ではない）と⑤（季重なり）で、必ず意見が割れます。そこで言うのはこの一言です――<strong>「ものさしは、○×をつける道具ではありません。どこを見るかを決める道具です」</strong></div>
+
+  <h3>やること④　最後に、自分の句にもう一度戻る</h3>
+  <p class="what">評価した目で、自分の句を見直します。AIの助言を使っても、今思いついたことを使っても構いません。直したところは、分かるように残してください。<strong>直すのも、直さないと決めるのも、作者です。</strong></p>
+
+  <h3>なぜ、AIが作った句を評価させるのか</h3>
+  <ul class="checks">
+    <li><strong>評価する側に立つ練習になる。</strong>この場面でだけ、子どもはルーブリックを何度も読み返します。配付物が、道具に変わる瞬間です</li>
+    <li><strong>悪いところを、悪いと言える。</strong>友達の句だと言いにくい辛口も、AIの句なら言えます。傷つく作者がいません</li>
+    <li><strong>短時間で、何句でもそろう。</strong>教材研究で、出来のばらつく5句をひねり出す時間はありません。頼めば、ばらつきごと作ってくれます</li>
+  </ul>
+  <div class="note">落とし穴も書いておきます。<strong>「助言どおりに直して満足」</strong>が起きます。そつのない句が30句そろうと、授業は成功に見えてしまいます。整っているものを疑う目が、こちら側に要ります。見取りは、成果物より<strong>直した過程</strong>で。</div>
+</section>
+
+<section class="step" id="one">
+  <h2>明日、1個だけ試してください</h2>
+  <p class="what">3つ全部やらなくて大丈夫です。<strong>1つだけ</strong>選んでください。</p>
+  <div class="one"><h4>1　図工か学級活動で、Ctrl + D の1時間をやる</h4><p>教えるのはキー1つ。準備はゼロです</p></div>
+  <div class="one"><h4>2　次に配るワークシートを、Canvaの「課題」で配ってみる</h4><p>リンクを作らない配り方を、1回だけ試す</p></div>
+  <div class="one"><h4>3　次の話し合いを1つの班だけ録って、その時間の中で「まとめて」と入れる</h4><p>子どもの声を録るのが難しければ、まず職員の協議から。研修報告の下書きになります</p></div>
+</section>
+
+<section class="step" id="tools">
+  <h2>道具（無料で配っています）</h2>
+  <p class="what">スーパー記録くん neo2 は、スプレッドシートをコピーして、デプロイして、URLを配るだけで自分の学校のものになります。GitHubのアカウントも、コードの編集も要りません。</p>
+  <p>
+    <a class="btnlink big" id="lnk-record" href="#">スーパー記録くん neo2 を開く</a>
+    <a class="btnlink ghost" href="https://gemini.google.com/app">Gemini</a>
+    <a class="btnlink ghost" href="https://notebooklm.google.com/">Gemini Notebook</a>
+    <a class="btnlink ghost" href="https://www.canva.com/">Canva</a>
+  </p>
+  <div class="note">録音は、名前（グループ名）を入れないと保存できないようにしてあります。誰の録音か分からないデータほど、あとで困るものはないからです。</div>
+</section>
+
+<section class="step" id="slides">
+  <h2>今日のスライド</h2>
+  <p class="what">当日投影したものです。手順の細かいところは、上の各セクションのほうが詳しく書いてあります。</p>
+  <p><a class="btnlink" href="assets/hirosaki20261014_slides.pdf">スライドを見る（PDF・34枚）</a></p>
+</section>
+
+<section class="step" id="reflect">
+  <h2>今日の振り返り</h2>
+  <p class="what">今日使った道具を、最後にもう一度使ってみてください。声で吹き込んでも、文字で打っても構いません。</p>
+  <p><a class="btnlink big" id="lnk-reflect" href="#">振り返りを入れる（スーパー記録くん）</a></p>
+</section>
+
+<div class="cta">
+  <p style="margin-top:0"><strong>作るのは道具。選ぶのは、子ども。</strong><br>
+  作業はスキップしていい。でも、思考はスキップさせない。今日はそれだけの話でした。</p>
+  <p style="margin-bottom:0">
+    <a class="btnlink ghost" href="https://bit.ly/maeta-kenshu">研修・講演メニュー</a>
+    <a class="btnlink ghost" href="https://www.youtube.com/@maetaict">YouTube</a>
+    <a class="btnlink ghost" href="https://link.amazon/B00VoIrzV">著書一覧</a>
+  </p>
+</div>
+
+<footer class="page">
+  令和8年度 弘前地区小学校視聴覚教育研究会 10月半日研修会（2026年10月14日・弘前市立西小学校）／前多昌顕（五所川原市立五所川原小学校）<br>
+  このページは研修参加者向けの資料置き場です。
+</footer>
+
+</div>
+<script>
+  // 配布URL（当日用の環境に差し替えたら、ここだけ直す）
+  var RECORD_URL = "https://script.google.com/macros/s/AKfycbz4uG4woWr233lr3W9ZeQa0czvY7VHTObixOt41b_hfOZzq5L50udPeLLGvvVpY5_UV/exec";
+  ["lnk-record", "lnk-reflect"].forEach(function (id) {
+    var a = document.getElementById(id);
+    if (a) { a.href = RECORD_URL; a.target = "_blank"; a.rel = "noopener"; }
+  });
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.getElementById(btn.dataset.copy);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent).then(function () {
+        var old = btn.textContent;
+        btn.textContent = "コピーしました";
+        btn.classList.add("done");
+        setTimeout(function () { btn.textContent = old; btn.classList.remove("done"); }, 1600);
+      });
+    });
+  });
+</script>
+</body>
+</html>
