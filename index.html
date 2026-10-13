@@ -56,6 +56,9 @@
   table.rub { width: 100%; border-collapse: collapse; font-size: .92rem; margin: 12px 0; }
   table.rub th, table.rub td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
   table.rub th { background: var(--accent-soft); width: 32%; }
+  table.rub3 th { width: auto; font-size: .85rem; }
+  table.rub3 th:first-child { width: 17%; }
+  table.rub3 td { font-size: .85rem; }
   .line3 { background: var(--panel); border: 2px solid var(--accent); border-radius: 12px; padding: 16px 20px; text-align: center; font-size: 1.15rem; font-weight: 700; margin: 12px 0; }
   .line3 small { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); margin-top: 6px; }
   .haiku { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 8px 0; font-size: 1.02rem; }
@@ -212,12 +215,13 @@
     <small>配った瞬間は、まだ読まれていません。読み返されるのは「評価する側」に立ったときだけです</small></div>
 
   <h3>ものさし（ルーブリック）を、先に配ります</h3>
-  <table class="rub">
-    <tr><th>1　音数とリズム</th><td>五・七・五。字余り・字足らずは、あえてならOK</td></tr>
-    <tr><th>2　季語</th><td>季節が伝わる言葉がひとつ</td></tr>
-    <tr><th>3　表現の工夫</th><td>比喩・反復・言葉の順序・漢字と仮名の使い分け</td></tr>
+  <table class="rub rub3">
+    <tr><th></th><th>A　よくできている</th><th>B　できている</th><th>C　もう少し</th></tr>
+    <tr><th>1　音数とリズム</th><td>五・七・五で、声に出すと気持ちよく読める。字余り・字足らずも、ねらいが感じられればA</td><td>ほぼ五・七・五。声に出すと、少しつかえるところがある</td><td>音数がばらばらで、リズムが取れない</td></tr>
+    <tr><th>2　季語</th><td>季節が伝わる言葉があり、その季節の景色が目に浮かぶ。季重なりでも、景色が浮かべばA</td><td>季節の言葉はあるが、景色はあまり浮かばない</td><td>季節が伝わる言葉がない</td></tr>
+    <tr><th>3　表現の工夫</th><td>比喩・反復・言葉の順序・漢字と仮名の使い分けのどれかを、ねらって使い、句の印象が深まっている</td><td>工夫は見られるが、ねらいや効果がはっきりしない</td><td>見たままを説明しているだけで、工夫が見られない</td></tr>
   </table>
-  <p class="what">評価は3段階です。<strong>A よくできている／B できている／C もう少し</strong>。</p>
+  <p class="what">観点ごとに、A・B・Cの<strong>3段階</strong>で評価します。字余り・字足らず・季重なりは、ねらいが感じられればおおらかに扱います。</p>
   <p class="what">この3観点は、本単元の評価規準とそのまま対応させてあります。作らせてから配るのではなく、<strong>作らせる前に</strong>配ります。</p>
 
   <h3>やること①　まず、自分で一句（AIには触りません）</h3>
@@ -228,12 +232,24 @@
   <div class="codewrap">
     <div class="codebar"><span class="fname">自分の句に助言をもらう</span>
       <button class="copy-btn" data-copy="p-haiku">コピー</button></div>
-    <pre><code id="p-haiku">小学生が作った俳句です。次のルーブリックに照らして、良いところを一つ、もっと良くなる提案を二つ、小学生に分かる言葉で書いてください。直した句は示さないでください。
+    <pre><code id="p-haiku">小学生が作った俳句です。次のルーブリックに照らして、3つの観点をそれぞれA・B・Cの3段階で評価してください。観点ごとに、そう評価した理由を、句の言葉を引用して一言ずつ書いてください。
+そのあと、良いところを一つ、もっと良くなる提案を二つ、小学生に分かる言葉で書いてください。直した句は示さないでください。
 この教材では、字余りや字足らずも許し、季重なりもおおらかに扱います。決まりを機械的に指摘しないでください。
+
 ルーブリック
 1　音数とリズム
+A：五・七・五で、声に出すと気持ちよく読める。字余り・字足らずも、ねらいが感じられればA
+B：ほぼ五・七・五。声に出すと、少しつかえるところがある
+C：音数がばらばらで、リズムが取れない
 2　季語
-3　表現の工夫（比喩・反復・言葉の順序・漢字と仮名の使い分け）
+A：季節が伝わる言葉があり、その季節の景色が目に浮かぶ。季重なりでも、景色が浮かべばA
+B：季節の言葉はあるが、景色はあまり浮かばない
+C：季節が伝わる言葉がない
+3　表現の工夫
+A：比喩・反復・言葉の順序・漢字と仮名の使い分けのどれかを、ねらって使い、句の印象が深まっている
+B：工夫は見られるが、ねらいや効果がはっきりしない
+C：見たままを説明しているだけで、工夫が見られない
+
 俳句：</code></pre>
   </div>
   <div class="note calm"><strong>「直した句は示さないでください」が、いちばん大事な一行です。</strong>完成形を見せられたら、子どもは写して終わります。採用するのも、却下するのも作者です。<strong>却下も、立派な推敲です。</strong></div>
